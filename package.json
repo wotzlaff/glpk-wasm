@@ -4,7 +4,9 @@
   "description": "GLPK compiled to wasm",
   "main": "dist/libglpk.js",
   "files": [
-    "dist/libglpk.wasm"
+    "dist/libglpk.wasm",
+    "dist/emscripten.d.ts",
+    "dist/libglpk.d.ts"
   ],
   "scripts": {
     "build": "scripts/build.sh"
