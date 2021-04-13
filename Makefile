@@ -14,7 +14,5 @@ all:
 		-s EXPORTED_FUNCTIONS=[$(subst $(space),$(comma),$(patsubst %,'_%',$(filter-out #%,$(file < exported-functions.txt)) free))] \
 		-s ALLOW_MEMORY_GROWTH=1 \
 		-s MODULARIZE=1 \
-		-s EXPORT_ES6=1 \
-		-s USE_ES6_IMPORT_META=0 \
 		-o dist/libglpk.js \
 		$(GLPK_DIR)/src/.libs/libglpk.so

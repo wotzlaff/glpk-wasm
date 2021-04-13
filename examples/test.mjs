@@ -1,4 +1,4 @@
-const glpkWasm = require('..')
+import glpkWasm from '../dist/esm/wrapper.js'
 
 glpkWasm().then(mod => {
   const ver = mod._glp_version()

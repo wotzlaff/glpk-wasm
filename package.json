@@ -2,12 +2,19 @@
   "name": "glpk-wasm",
   "version": "0.0.2",
   "description": "GLPK compiled to wasm",
-  "main": "dist/libglpk.js",
+  "main": "./dist/libglpk.js",
   "files": [
+    "dist/libglpk.js",
     "dist/libglpk.wasm",
     "dist/emscripten.d.ts",
-    "dist/libglpk.d.ts"
+    "dist/libglpk.d.ts",
+    "dist/esm/wrapper.js"
   ],
+  "types": "./dist/libglpk.d.ts",
+  "exports": {
+    "require": "./dist/libglpk.js",
+    "import": "./dist/esm/wrapper.js"
+  },
   "scripts": {
     "build": "scripts/build.sh"
   },
