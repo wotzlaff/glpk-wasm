@@ -1,8 +1,3 @@
-declare const FS: {
-  readFile(name: string, opts?: { encoding?: 'binary'; flags?: 'r' }): ArrayBuffer
-  readFile(name: string, opts?: { encoding?: 'utf8'; flags?: 'r' }): string
-}
-
 declare class Ptr extends Number {}
 
 declare interface Module {
@@ -12,4 +7,8 @@ declare interface Module {
   _free(ptr: Ptr): void
   _malloc(size: number): Ptr
   HEAPU8: Uint8Array
+  FS: {
+    readFile(name: string, opts?: { encoding?: 'binary'; flags?: 'r' }): ArrayBuffer
+    readFile(name: string, opts?: { encoding?: 'utf8'; flags?: 'r' }): string
+  }
 }

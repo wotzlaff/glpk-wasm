@@ -78,14 +78,13 @@ fs.writeFileSync(
   [
     '///<reference path="./emscripten.d.ts"/>',
     '',
-    ...Array.from(ptrTypes, t => `declare class ${t} extends Ptr {}`),
+    ...Array.from(ptrTypes, t => `export declare class ${t} extends Ptr {}`),
     '',
-    'declare interface GLPKModule extends Module {',
+    'export declare interface GLPKModule extends Module {',
     ...signatures.map(s => '  ' + s),
     '}',
     '',
-    'declare function initialize(): Promise<GLPKModule>',
-    'export = initialize',
+    'export default function initialize(): Promise<GLPKModule>',
     '',
   ].join('\n')
 )

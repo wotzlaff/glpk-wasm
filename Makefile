@@ -1,10 +1,8 @@
-ex_funcs = setValue getValue stringToUTF8 UTF8ToString lengthBytesUTF8
+ex_funcs = setValue getValue stringToUTF8 UTF8ToString lengthBytesUTF8 FS
 noop=
 space = $(noop) $(noop)
 comma = ,
 EXTRA_EXPORTED_RUNTIME_METHODS = EXTRA_EXPORTED_RUNTIME_METHODS=[$(subst $(space),$(comma),$(patsubst %,'%',$(ex_funcs)))]
-EXPORTED_FUNCTIONS = 
-
 
 all:
 	mkdir -p dist
