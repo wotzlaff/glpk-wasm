@@ -1,27 +1,33 @@
 {
   "name": "glpk-wasm",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "GLPK compiled to wasm",
-  "main": "./dist/libglpk.js",
+  "main": "./dist/index.js",
   "files": [
-    "dist/libglpk.js",
-    "dist/libglpk.wasm",
+    "dist/index.js",
     "dist/emscripten.d.ts",
-    "dist/libglpk.d.ts",
-    "dist/esm/wrapper.js"
+    "dist/index.d.ts",
+    "dist/libglpk.wasm"
   ],
-  "types": "./dist/libglpk.d.ts",
-  "exports": {
-    "require": "./dist/libglpk.js",
-    "import": "./dist/esm/wrapper.js"
-  },
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "scripts/build.sh"
+    "build": "scripts/build.sh && rollup -c"
   },
   "keywords": [
-    "GLPK", "LP", "wasm"
+    "GLPK",
+    "LP",
+    "MIP",
+    "wasm",
+    "WebAssembly",
+    "linear programming",
+    "integer programming",
+    "discrete optimization"
   ],
   "repository": "https://github.com/wotzlaff/glpk-wasm",
   "author": "Nico Strasdat <nstrasdat@gmail.com>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "rollup": "^2.45.2"
+  }
 }

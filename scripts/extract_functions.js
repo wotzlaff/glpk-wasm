@@ -74,7 +74,7 @@ data.inner
 fs.writeFileSync('./exported-functions.txt', functions.join('\n'))
 
 fs.writeFileSync(
-  './dist/libglpk.d.ts',
+  './dist/index.d.ts',
   [
     '///<reference path="./emscripten.d.ts"/>',
     '',
