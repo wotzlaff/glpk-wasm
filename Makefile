@@ -20,3 +20,8 @@ build:
 		-s MODULARIZE=1 \
 		-o dist/libglpk.js \
 		$(GLPK_DIR)/src/.libs/libglpk.so
+
+dist/index.js:
+	@echo "(function (root, factory) {if (typeof define === 'function' && define.amd) {define([], factory)} else if (typeof module === 'object' && module.exports) {module.exports = factory()} else {root.streamingPercentiles = factory()}}(typeof self !== 'undefined' ? self : this, function () {\n" > $@
+	@cat dist/libglpk.js >> $@
+	@echo "\nreturn Module}))" >> $@

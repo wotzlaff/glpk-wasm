@@ -1,6 +1,6 @@
 {
   "name": "glpk-wasm",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "GLPK compiled to wasm",
   "main": "./dist/index.js",
   "files": [
@@ -11,7 +11,7 @@
   ],
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "scripts/build.sh && rollup -c"
+    "build": "scripts/build.sh"
   },
   "keywords": [
     "GLPK",
@@ -25,8 +25,5 @@
   ],
   "repository": "https://github.com/wotzlaff/glpk-wasm",
   "author": "Nico Strasdat <nstrasdat@gmail.com>",
-  "license": "GPL-3.0",
-  "devDependencies": {
-    "rollup": "^2.45.2"
-  }
+  "license": "GPL-3.0"
 }
