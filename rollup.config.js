@@ -1,5 +1,3 @@
-import commonjs from '@rollup/plugin-commonjs'
-
 export default {
   input: 'dist/libglpk.js',
   output: {
@@ -8,5 +6,4 @@ export default {
     exports: 'auto',
     name: 'GLPK',
   },
-  plugins: [commonjs()],
 }

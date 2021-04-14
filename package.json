@@ -1,6 +1,6 @@
 {
   "name": "glpk-wasm",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "GLPK compiled to wasm",
   "main": "./dist/index.js",
   "files": [
@@ -27,7 +27,6 @@
   "author": "Nico Strasdat <nstrasdat@gmail.com>",
   "license": "GPL-3.0",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^18.0.0",
     "rollup": "^2.45.2"
   }
 }
