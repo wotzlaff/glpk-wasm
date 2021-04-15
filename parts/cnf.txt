@@ -1,0 +1,6 @@
+glp_read_cnfsat
+glp_check_cnfsat
+glp_write_cnfsat
+
+glp_minisat1
+glp_intfeas1

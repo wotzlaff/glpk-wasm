@@ -1,0 +1,4 @@
+glp_create_index
+glp_find_row
+glp_find_col
+glp_delete_index

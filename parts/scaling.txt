@@ -1,0 +1,6 @@
+glp_set_rii
+glp_set_sjj
+glp_get_rii
+glp_get_sjj
+glp_scale_prob
+glp_unscale_prob

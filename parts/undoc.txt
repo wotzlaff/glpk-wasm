@@ -1,0 +1,5 @@
+glp_get_it_cnt
+glp_set_it_cnt
+
+glp_time
+glp_difftime

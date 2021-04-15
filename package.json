@@ -1,14 +1,22 @@
 {
   "name": "glpk-wasm",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "GLPK compiled to wasm",
-  "main": "./dist/index.js",
   "files": [
-    "dist/index.js",
+    "dist/glpk.*.js",
+    "dist/glpk.*.wasm",
     "dist/emscripten.d.ts",
-    "dist/index.d.ts",
-    "dist/libglpk.wasm"
+    "dist/index.d.ts"
   ],
+  "exports": {
+    ".": "./dist/glpk.min.js",
+    "./min": "./dist/glpk.min.js",
+    "./graph": "./dist/glpk.graph.js",
+    "./mip": "./dist/glpk.mip.js",
+    "./more": "./dist/glpk.more.js",
+    "./full": "./dist/glpk.full.js",
+    "./all": "./dist/glpk.all.js"
+  },
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "scripts/build.sh"

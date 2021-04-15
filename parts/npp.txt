@@ -1,0 +1,7 @@
+glp_npp_alloc_wksp
+glp_npp_load_prob
+glp_npp_preprocess1
+glp_npp_build_prob
+glp_npp_postprocess
+glp_npp_obtain_sol
+glp_npp_free_wksp
