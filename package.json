@@ -1,6 +1,6 @@
 {
   "name": "glpk-wasm",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "GLPK compiled to wasm",
   "main": "./dist/index.js",
   "files": [
