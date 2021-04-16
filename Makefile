@@ -1,4 +1,4 @@
-ex_funcs = setValue getValue stringToUTF8 UTF8ToString lengthBytesUTF8 FS
+ex_funcs = setValue getValue stringToUTF8 UTF8ToString lengthBytesUTF8 FS addFunction removeFunction
 noop=
 space = $(noop) $(noop)
 comma = ,
@@ -28,6 +28,7 @@ build-%:
 		-s $(EXTRA_EXPORTED_RUNTIME_METHODS) \
 		-s EXPORTED_FUNCTIONS=[$(subst $(space),$(comma),$(patsubst %,'_%',$(filter-out #%,$(foreach part,$(parts-$*),$(file < parts/$(part).txt))) free))] \
 		-s ALLOW_MEMORY_GROWTH=1 \
+		-s ALLOW_TABLE_GROWTH=1 \
 		-s MODULARIZE=1 \
 		-o dist/glpk.$*.js \
 		$(GLPK_DIR)/src/.libs/libglpk.so
