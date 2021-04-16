@@ -8,8 +8,9 @@
     "dist/emscripten.d.ts",
     "dist/index.d.ts"
   ],
+  "main": "./dist/glpk.all.js",
   "exports": {
-    ".": "./dist/glpk.min.js",
+    ".": "./dist/glpk.all.js",
     "./min": "./dist/glpk.min.js",
     "./graph": "./dist/glpk.graph.js",
     "./mip": "./dist/glpk.mip.js",

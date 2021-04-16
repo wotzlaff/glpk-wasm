@@ -1,4 +1,4 @@
-import glpkWasm from '../dist/index.js'
+import glpkWasm from '../dist/glpk.all.js'
 
 glpkWasm().then(mod => {
   const ver = mod._glp_version()
