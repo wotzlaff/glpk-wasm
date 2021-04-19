@@ -1,4 +1,5 @@
 declare class Ptr extends Number {}
+declare class FunctionPtr extends Ptr {}
 
 type Type = 'i8' | 'i16' | 'i32' | 'i64' | 'float' | 'double' | '*'
 
@@ -10,6 +11,9 @@ declare interface Module {
   setValue(ptr: Ptr, val: number, type: Type): void
   _free(ptr: Ptr): void
   _malloc(size: number): Ptr
+
+  addFunction(fn: Function, signature: string): FunctionPtr
+  removeFunction(fnPtr: FunctionPtr): void
   HEAPU8: Uint8Array
   FS: {
     readFile(name: string, opts?: { encoding?: 'binary'; flags?: 'r' }): ArrayBuffer
