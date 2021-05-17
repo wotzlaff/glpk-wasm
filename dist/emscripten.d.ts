@@ -16,7 +16,8 @@ declare interface Module {
   removeFunction(fnPtr: FunctionPtr): void
   HEAPU8: Uint8Array
   FS: {
-    readFile(name: string, opts?: { encoding?: 'binary'; flags?: 'r' }): ArrayBuffer
-    readFile(name: string, opts?: { encoding?: 'utf8'; flags?: 'r' }): string
+    readFile(path: string, opts?: { encoding?: 'binary'; flags?: 'r' }): ArrayBuffer
+    readFile(path: string, opts?: { encoding?: 'utf8'; flags?: 'r' }): string
+    writeFile(path: string, data: string | ArrayBufferView, opts?: { flags?: 'w' }): void
   }
 }
